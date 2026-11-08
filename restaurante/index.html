@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante Sabor de Casa: cocina colombiana, menú y reservas en línea.">
+    <title>Sabor de Casa | Restaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor">
+            <a class="logo" href="index.html">Sabor de Casa</a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">&#9776;</button>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="portada">
+            <div class="contenedor">
+                <h1>Bienvenidos a Sabor de Casa</h1>
+                <p>Recetas de la abuela con un toque moderno. Ven a disfrutar de una experiencia hecha con cariño.</p>
+                <div class="acciones">
+                    <a class="boton" href="reservas.html">Reservar una mesa</a>
+                    <a class="boton boton-secundario" href="menu.html">Ver el menú</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <h2>¿Por qué elegirnos?</h2>
+                    <p>Lo que hace especial cada visita</p>
+                </div>
+                <div class="rejilla">
+                    <article class="tarjeta">
+                        <div class="icono" aria-hidden="true">🥘</div>
+                        <h3>Cocina tradicional</h3>
+                        <p>Platos colombianos preparados con recetas auténticas y técnicas actuales.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <div class="icono" aria-hidden="true">🌿</div>
+                        <h3>Ingredientes frescos</h3>
+                        <p>Trabajamos con productores locales para ofrecer lo mejor de cada temporada.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <div class="icono" aria-hidden="true">🍷</div>
+                        <h3>Ambiente acogedor</h3>
+                        <p>Un espacio cálido, ideal para compartir en familia, con amigos o en pareja.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" style="background: var(--color-superficie);">
+            <div class="contenedor titulo-seccion" style="margin-bottom:0;">
+                <h2>¿Listo para visitarnos?</h2>
+                <p style="margin-bottom:24px;">Reserva en línea en menos de un minuto.</p>
+                <a class="boton" href="reservas.html">Hacer una reserva</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie" id="contacto">
+        <div class="contenedor">
+            <div class="rejilla">
+                <div>
+                    <h3>Sabor de Casa</h3>
+                    <p>Cocina colombiana de autor, hecha con ingredientes locales.</p>
+                </div>
+                <div>
+                    <h3>Horario</h3>
+                    <ul>
+                        <li>Martes a domingo</li>
+                        <li>Almuerzo: 12:00 – 15:00</li>
+                        <li>Cena: 19:00 – 22:00</li>
+                        <li>Lunes: cerrado</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Calle 10 # 5-20, Centro</li>
+                        <li>Tel: (601) 555 0123</li>
+                        <li>reservas@sabordecasa.com</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copy">&copy; <span id="anio"></span> Sabor de Casa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/comun.js"></script>
+</body>
+</html>
