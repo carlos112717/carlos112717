@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserva tu mesa en Sabor de Casa.">
+    <title>Reservas | Sabor de Casa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor">
+            <a class="logo" href="index.html">Sabor de Casa</a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">&#9776;</button>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="reservas.html" class="activo" aria-current="page">Reservas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="encabezado-pagina">
+            <div class="contenedor">
+                <h1>Reserva tu mesa</h1>
+                <p>Elige el día, la hora y el número de personas</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor reserva-layout">
+                <div class="tarjeta">
+                    <form id="form-reserva" class="formulario" novalidate>
+                        <div class="campo completo" data-campo="nombre">
+                            <label for="nombre">Nombre completo <span class="req">*</span></label>
+                            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+                            <span class="error"></span>
+                        </div>
+                        <div class="campo" data-campo="email">
+                            <label for="email">Correo electrónico <span class="req">*</span></label>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                            <span class="error"></span>
+                        </div>
+                        <div class="campo" data-campo="telefono">
+                            <label for="telefono">Teléfono <span class="req">*</span></label>
+                            <input id="telefono" name="telefono" type="tel" autocomplete="tel" required>
+                            <span class="error"></span>
+                        </div>
+                        <div class="campo" data-campo="fecha">
+                            <label for="fecha">Fecha <span class="req">*</span></label>
+                            <input id="fecha" name="fecha" type="date" required>
+                            <span class="error"></span>
+                        </div>
+                        <div class="campo" data-campo="personas">
+                            <label for="personas">Personas <span class="req">*</span></label>
+                            <input id="personas" name="personas" type="number" min="1" value="2" required>
+                            <span class="error"></span>
+                        </div>
+                        <div class="campo completo" data-campo="hora">
+                            <label>Horario <span class="req">*</span></label>
+                            <div class="horas" id="horas" role="group" aria-label="Horarios disponibles"></div>
+                            <span class="ayuda" id="ayuda-horas"></span>
+                            <span class="error"></span>
+                        </div>
+                        <div class="campo completo">
+                            <label for="ocasion">Ocasión especial</label>
+                            <select id="ocasion" name="ocasion">
+                                <option value="">Ninguna</option>
+                                <option>Cumpleaños</option>
+                                <option>Aniversario</option>
+                                <option>Reunión de negocios</option>
+                                <option>Otra</option>
+                            </select>
+                        </div>
+                        <div class="campo completo">
+                            <label for="comentarios">Comentarios (alergias, silla para bebé…)</label>
+                            <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+                        </div>
+                        <div class="mensaje" id="mensaje" role="status" aria-live="polite"></div>
+                        <div class="campo completo">
+                            <button class="boton" type="submit">Confirmar reserva</button>
+                        </div>
+                    </form>
+                </div>
+
+                <aside>
+                    <div class="tarjeta">
+                        <h3>Información</h3>
+                        <ul class="info-lista" style="margin-top:12px;">
+                            <li><strong>Horario</strong><span>Martes a domingo · 12:00–15:00 y 19:00–22:00</span></li>
+                            <li><strong>Grupos grandes</strong><span>Más de 12 personas: llámanos al (601) 555 0123</span></li>
+                            <li><strong>Tolerancia</strong><span>Guardamos tu mesa 15 minutos después de la hora reservada</span></li>
+                        </ul>
+                    </div>
+                    <div class="tarjeta" style="margin-top:24px;">
+                        <h3>Mis reservas</h3>
+                        <ul class="mis-reservas" id="mis-reservas"></ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie" id="contacto">
+        <div class="contenedor">
+            <div class="rejilla">
+                <div>
+                    <h3>Sabor de Casa</h3>
+                    <p>Cocina colombiana de autor, hecha con ingredientes locales.</p>
+                </div>
+                <div>
+                    <h3>Horario</h3>
+                    <ul>
+                        <li>Martes a domingo</li>
+                        <li>Almuerzo: 12:00 – 15:00</li>
+                        <li>Cena: 19:00 – 22:00</li>
+                        <li>Lunes: cerrado</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Calle 10 # 5-20, Centro</li>
+                        <li>Tel: (601) 555 0123</li>
+                        <li>reservas@sabordecasa.com</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copy">&copy; <span id="anio"></span> Sabor de Casa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/comun.js"></script>
+    <script src="js/reservas.js"></script>
+</body>
+</html>
